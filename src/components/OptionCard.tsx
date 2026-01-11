@@ -56,12 +56,7 @@ export function OptionCard({ option }: OptionCardProps) {
                   value={String(opt.value)}
                   className="text-xs"
                 >
-                  {String(opt.value)}
-                  {isDefault && (
-                    <Badge variant="secondary" className="ml-1 text-xs">
-                      default
-                    </Badge>
-                  )}
+                  {String(opt.value) + (isDefault ? ' ⚙️' : '')}
                 </TabsTrigger>
               )
             })}

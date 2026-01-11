@@ -28,11 +28,11 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-              <span className="text-primary">Prettier</span> Options Preview
+              <span className="text-primary">Prettier</span> Options Configurator
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore all Prettier formatting options with live code previews.
-              See how each option affects your code formatting.
+              Explore all Prettier formatting options. Preview and export
+              configuration files for your projects.
             </p>
           </div>
 
