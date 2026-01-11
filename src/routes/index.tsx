@@ -67,7 +67,7 @@ function App() {
 
           {showOxfmtSection && filteredOxfmtOptions.length > 0 && (
             <>
-              <div className="my-16 h-px bg-border" />
+              <div className="my-16" />
 
               <div className="flex items-center justify-between mb-10">
                 <div className="text-center flex-1">
