@@ -61,7 +61,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             <p>© 2026 Mellowfmt. All rights reserved.</p>
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com/kostyniuk"
+                href="https://github.com/kostyniuk/mellow-fmt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"

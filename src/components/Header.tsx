@@ -29,7 +29,7 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/kostyniuk"
+            href="https://github.com/kostyniuk/mellow-fmt"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
