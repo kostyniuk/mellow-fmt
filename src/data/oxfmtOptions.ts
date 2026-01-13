@@ -74,28 +74,35 @@ export default message;
     defaultValue: false,
     cliOverride: '--experimental-sort-imports',
     apiOverride: 'experimentalSortImports: { ... }',
+    subOptions: [
+      { key: 'ignoreCase', label: 'Ignore Case', defaultValue: true },
+      { key: 'newlinesBetween', label: 'Newlines Between Groups', defaultValue: true },
+      { key: 'order', label: 'Sort Order', defaultValue: 'asc', type: 'select', choices: ['asc', 'desc'] },
+    ],
+    // Unformatted input code - will be formatted dynamically by oxfmt
+    inputCode: `import { z } from 'Zod';
+import { client } from 'axios';
+import fs from 'node:fs';
+import path from 'node:path';
+import { theme } from '@/Beta/theme';
+import { cn } from '@/alpha/utils';`,
     options: [
       {
         value: false,
-        label: 'disabled (default)',
+        label: 'false',
         description: 'Do not sort import statements',
-        codeExample: `import { useState } from "react";
-import axios from "axios";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import fs from "node:fs";`,
+        codeExample: `import { z } from 'Zod';
+import { client } from 'axios';
+import fs from 'node:fs';
+import path from 'node:path';
+import { theme } from '@/Beta/theme';
+import { cn } from '@/alpha/utils';`,
       },
       {
         value: true,
-        label: 'enabled',
+        label: 'true',
         description: 'Sort imports by groups: builtin, external, internal, parent, sibling, index',
-        codeExample: `import fs from "node:fs";
-
-import axios from "axios";
-import { useState } from "react";
-
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";`,
+        codeExample: '', // Will be filled dynamically
       },
     ],
   },

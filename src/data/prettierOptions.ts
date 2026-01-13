@@ -1,19 +1,29 @@
 export interface PrettierOptionValue {
-  value: string | boolean | number
+  value: string | boolean | number | Record<string, any>
   label: string
   description?: string
   codeExample: string
+}
+
+export interface SubOption {
+  key: string
+  label: string
+  defaultValue: string | boolean | number
+  type?: 'checkbox' | 'select'
+  choices?: string[]
 }
 
 export interface PrettierOption {
   name: string
   key: string
   description: string
-  defaultValue: string | boolean | number
+  defaultValue: string | boolean | number | Record<string, any>
   cliOverride: string
   apiOverride: string
   options: PrettierOptionValue[]
   language?: string
+  subOptions?: SubOption[]
+  inputCode?: string // Unformatted code for dynamic formatting
 }
 
 export const prettierOptions: PrettierOption[] = [
