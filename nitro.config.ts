@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineNitroConfig({
+  preset: 'vercel',
   hooks: {
     compiled: (nitro) => {
       // Copy the native binding to the output directory
