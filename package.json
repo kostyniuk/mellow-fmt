@@ -6,7 +6,9 @@
     "dev": "vite dev --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "vercel-build": "npm run build:fix-oxfmt && vite build",
+    "build:fix-oxfmt": "npm install @oxfmt/linux-x64-musl --no-save"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
